@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain
+langgraph
+langchain-community
+chromadb
+openai
+pypdf
+python-dotenv
