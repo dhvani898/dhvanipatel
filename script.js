@@ -6,6 +6,12 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
 });
 
+
+fetch("https://dhvanipatel-4.onrender.com/chat", {
+  method: "POST",
+  ...
+});
+
 menu.onclick = () => {
   navbar.classList.toggle("active");
 };
