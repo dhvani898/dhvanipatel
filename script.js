@@ -7,10 +7,10 @@ window.addEventListener("scroll", () => {
 });
 
 
-fetch("https://dhvanipatel-4.onrender.com/chat", {
-  method: "POST",
-  ...
-});
+// fetch("https://dhvanipatel-4.onrender.com/chat", {
+//   method: "POST",
+//   ...
+// });
 
 menu.onclick = () => {
   navbar.classList.toggle("active");
@@ -90,7 +90,7 @@ function sendMessage() {
 
   input.value = "";
 
-  fetch("http://127.0.0.1:8000/chat", {
+  fetch("https://dhvanipatel-4.onrender.com/chat", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
