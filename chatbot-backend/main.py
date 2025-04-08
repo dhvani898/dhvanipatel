@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from typing import TypedDict, List
 from langchain_core.documents import Document
+from pathlib import Path
 
 class GraphState(TypedDict):
     input: str
@@ -20,8 +21,11 @@ class GraphState(TypedDict):
 
 
 
+BASE_DIR = Path(__file__).resolve().parent
+pdf_path = BASE_DIR / "resume" / "dhvani_resume.pdf"
 
-loader = PyPDFLoader("resume/dhvani_resume.pdf")  
+loader = PyPDFLoader(str(pdf_path))
+
 documents = loader.load()
 
 splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
